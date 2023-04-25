@@ -19,6 +19,9 @@ def index(request):
     })
 
 def login_view(request):
+    if request.user.is_authenticated:
+        return redirect('index')
+    
     if request.method =='POST':
         username = request.POST.get('username') #DICCIONARIO 
         password = request.POST.get('password')
@@ -41,6 +44,9 @@ def logout_view(request):
     return redirect('login')
 
 def register(request):
+    if request.user.is_authenticated:
+        return redirect('index')
+
     form = RegisterForm(request.POST or None)
 
     if request.method == 'POST' and form.is_valid():
