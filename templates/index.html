@@ -3,18 +3,16 @@
     
 
 <div class="col">
-    <h1>{{ message }}</h1>
-        <ul class="list-group">
-            {% for product in products %}
-            <li class="list-group-item">{{ product.title }}
-                
-                
-                <span class="text-success">{{ product.price }}</span>
-                
-                    
-            </li>
+    <h4 class="text-center">{{ message }}</h4>
+        
+        <div class="row">
+            {% for <object data="" type=""></object> in products %}
+            <div class="col-3 mt-5">
+                {% include 'products/snippets/product.html' with product=object %}
+            </div>
+            
             {% endfor %}
-        </ul>
+        </div>
 </div>    
    
 {% endblock %}
