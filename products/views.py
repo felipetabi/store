@@ -35,7 +35,8 @@ class ProductSearchListView(ListView):
 
     def get_queryset(self):
         #SELECT * FROM products WHERE title like %valor%
-        return Product.objects.filter(title__icontains=self.query())
+        filters = Q(title__icontains=self.query()) | Q(category__title__icontains=self.query())
+        return Product.objects.filter(filters)
     
     def query(self):
         return self.request.GET.get('q')
