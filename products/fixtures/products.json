@@ -1,0 +1,26 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "Playera para caballeros",
+        "description": "playera para caballeros",
+        "price": "10.00",
+        "slug": "playera-para-caballeros",
+        "image": "products/pngwing.com.png",
+        "created_at": "2023-05-26T14:36:36.846Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "Playera para dama",
+        "description": "playera para dama",
+        "price": "20.00",
+        "slug": "playera-para-dama",
+        "image": "products/png-transparent-t-shirt-shoulder-black-m-t-shirt-tshirt-active-shirt-woman.png",
+        "created_at": "2023-06-01T00:59:46.865Z"
+    }
+}
+]
