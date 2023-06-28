@@ -9,12 +9,15 @@
 </div>
 
 <div class="col">
-    <div class="h1">{{ product.title }}</div>
+    <div class="h2">{{ product.title }}</div>
     <div class="h5 font-weight-bold">
     Precio: <span class="text-danger">${{ product.price }}</span>
     </div>
     <div class="">
         <p>{{ product.description }}</p>
+    </div>
+    <div class="">
+        {% include 'carts/snippets/add.html' %}
     </div>
 </div>
 
