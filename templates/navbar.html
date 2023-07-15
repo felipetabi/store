@@ -12,8 +12,8 @@
 
         <ul class="navbar-nav">
             <li class="nav-item {% if request.path == cart %}active{% endif %}">
-                <a class="nav-link" href="{{ cart }}">
-                    Mi carrito <span class="fas fa-shopping-cart"></span>
+                <a class="nav-link" href="{% url 'carts:cart' %}">Mi Carrito
+                    <span class="fas fa-shopping-cart"></span>
                 </a>
             </li>
         </ul>
